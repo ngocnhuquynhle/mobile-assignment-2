@@ -1,56 +1,155 @@
 # Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Starbucks-Inspired Mobile App
 
-## Get started
+**Mobile Development – Assignment 2**
 
-1. Install dependencies
+## Project Overview
+
+This project is a Starbucks-inspired mobile application developed using React Native, Expo, Expo Router, and TypeScript.
+
+The goal of this assignment is to recreate the look and feel of a real-world mobile application while implementing multiple screens, navigation, reusable components, and interactive features.
+
+The application is a student project created for educational purposes and is not affiliated with Starbucks.
+
+## Features
+
+### 1. Home Screen
+
+- Personalized welcome message
+- Starbucks Rewards Star balance
+- Promotional offers and reward cards
+- Quick access to the ordering screen
+
+### 2. Scan Screen
+
+- Starbucks-inspired digital card interface
+- Scan & Pay and Scan Only options
+- QR code illustration
+- Add a demo Starbucks card
+- Set a card as the default
+
+### 3. Order Screen
+
+- Browse drinks by category
+- Search for drinks
+- View drink details and prices
+- Select item quantities
+- Add drinks to the shopping cart
+- View, remove, and clear cart items
+- Automatically calculate cart totals
+
+### 4. Gift Screen
+
+- Choose from different gift card designs
+- Select a gift card amount
+- Enter recipient and sender information
+- Add a personalized message
+- Preview the gift card before finishing
+
+### 5. Rewards Screen
+
+- View Star balance and reward progress
+- Explore different reward levels
+- Switch between rewards and benefits
+- Navigate to the Scan and Order screens
+
+## Technologies Used
+
+- React Native
+- Expo
+- Expo Router
+- TypeScript
+- React Context API
+- Ionicons
+
+## Navigation
+
+The application uses two navigation patterns:
+
+**Tab Navigation:** Home, Scan, Order, Gift, and Rewards.
+
+**Stack Navigation:** Allows users to open the Drink Details screen from the Order screen and return to the previous screen.
+
+## Reusable Components and State Management
+
+The application includes a reusable `DrinkCard` component for displaying menu items.
+
+The shopping cart uses React Context API to share cart information between the Order and Drink Details screens. Users can add items, change quantities, remove items, and view the total price.
+
+## How to Run the Project
+
+### Prerequisites
+
+- Node.js
+- npm
+- Expo Go on a mobile device, or a supported simulator
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ngocnhuquynhle/mobile-assignment-2.git
+   ```
+
+2. Open the project directory:
+
+   ```bash
+   cd mobile-assignment-2
+   ```
+
+3. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+4. Start the development server:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+5. Scan the QR code using Expo Go to run the application on a mobile device.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Structure
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+src/
+├── app/
+│   ├── (tabs)/
+│   │   ├── index.tsx
+│   │   ├── scan.tsx
+│   │   ├── order.tsx
+│   │   ├── gifts.tsx
+│   │   ├── rewards.tsx
+│   │   └── _layout.tsx
+│   ├── drink-details.tsx
+│   ├── index.tsx
+│   └── _layout.tsx
+├── components/
+│   └── DrinkCard.tsx
+└── context/
+    └── CartContext.tsx
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+## Important Notes
 
-### Other setup steps
+This application is a functional educational prototype.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+- Menu items and prices are sample data.
+- Reward Stars are demonstration values.
+- QR code scanning and payment processing are not connected to real Starbucks services.
+- Gift card previews are for demonstration purposes only.
+- Shopping cart data is stored in application memory and is not saved to an external database.
 
-## Learn more
+## Author
 
-To learn more about developing your project with Expo, look at the following resources:
+Quinn Le
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Mobile Development – Assignment 2
 
-## Join the community
+## GitHub Repository
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+https://github.com/ngocnhuquynhle/mobile-assignment-2
